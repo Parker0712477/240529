@@ -18,6 +18,58 @@ img {
   height:auto;
 }
 
+#ani3 {
+  width:100px;
+  height:100px;
+  margin: 0 auto;
+  background-color:black;
+  animation-name:bgchange;
+  animation-duration:5s;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+  animation-play-state:paused;
+  animation-direction: alternate-reverse;
+}
+@keyframes bgchange {
+
+  0%{
+    background-color:red;
+    left: 0;
+  }
+
+  20%{
+    background-color:orange;
+    left: 25%;
+    top: 200px;
+  }
+
+  40%{
+    background-color:yellow;
+    left: 50%;
+    top: 200px;
+  }
+
+  60%{
+    background-color:green;
+    left: 30%;
+    top: 0px;
+  }
+
+}
+
+#trans5 {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  background-color: orange;
+}
+
+#trans5:hover {
+  /* transform: translateX(300px); */
+  transform: rotate(70deg);
+  transform-origin: bottom center;
+}
+
 #head_title {
   text-align: center;
   font-size: 1.3em;
@@ -27,8 +79,9 @@ img {
 .flex-container {
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  width: 100%;
+  justify-content: space-evenly;
+
+  width: 80%;
   height: auto;
   background-color: #c4c4c4;
   border: 1px solid black;
@@ -53,12 +106,23 @@ img {
   height: auto;
   background-color: #ffc4c4;
   border: 1px solid black;
+  align-items: center;
+  justify-items: center;
+  place-items: center-center;
 }
-.grid-item{
+
+.gird-layout {
+  display: grid;
+  width: 90%;
+}
+
+.grid-item { 
   color:white;
+  width: 90%;
   margin: 5px;
-  background-color:#52aaaa;
+  background-color: hsl(132, 30%, 69%);
 }
+
 .grid-item:nth-child(2n){
   background-color:#5ebfbf;
 }
